@@ -21,10 +21,4 @@ const createElementLi = item => {
 
 const createListElementLi = ingredients.map(createElementLi);
 
-
 ingredientsEl.append(...createListElementLi);
-
-
-
-
-
