@@ -3,7 +3,9 @@ const refs = {
   output: document.querySelector('#name-output'),
 };
 
-refs.input.addEventListener('input', () => {
-  refs.output.textContent =
-    refs.input.value.trim() === '' ? 'Anonymous' : refs.input.value;
-});
+function updateNameOutput() {
+  const isNameValid = refs.input.value.trim() !== '';
+  refs.output.textContent = isNameValid ? refs.input.value : 'Anonymous';
+}
+
+refs.input.addEventListener('input', updateNameOutput);

@@ -7,12 +7,28 @@ const refs = {
   incrementBtn: counterEl.querySelector('button[data-action="increment"]'),
 };
 
+//? solution 1
+// refs.decrementBtn.addEventListener('click', () => {
+//   counterValue -= 1;
+//   value.textContent = counterValue;
+// });
+
+// refs.incrementBtn.addEventListener('click', () => {
+//   counterValue += 1;
+//   value.textContent = counterValue;
+// });
+
+
+//? solution 2
+function changeCounterValue(value) {
+  counterValue += value;
+  refs.value.textContent = counterValue;
+}
+
 refs.decrementBtn.addEventListener('click', () => {
-  counterValue -= 1;
-  value.textContent = counterValue;
+  changeCounterValue(-1);
 });
 
 refs.incrementBtn.addEventListener('click', () => {
-  counterValue += 1;
-  value.textContent = counterValue;
+  changeCounterValue(1);
 });

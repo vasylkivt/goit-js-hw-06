@@ -13,13 +13,12 @@ const refs = {
   text: widgetEl.querySelector('.color'),
 };
 
-const onTargetButtonClick = refs.button.addEventListener(
-  'click',
-  changeBgColor
-);
+refs.button.addEventListener('click', changeBgColor);
 
 function changeBgColor() {
   const randomColor = getRandomHexColor();
   document.body.style.backgroundColor = randomColor;
   refs.text.textContent = randomColor;
 }
+
+

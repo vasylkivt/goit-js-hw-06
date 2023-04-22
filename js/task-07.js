@@ -5,7 +5,8 @@ const refs = {
 
 refs.text.style.fontSize = `${refs.input.value}px`;
 
-refs.input.addEventListener(
-  'input',
-  () => (refs.text.style.fontSize = `${refs.input.value}px`)
-);
+function handleFontSizeChange() {
+  refs.text.style.fontSize = `${refs.input.value}px`;
+}
+
+refs.input.addEventListener('input', handleFontSizeChange);
