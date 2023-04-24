@@ -2,7 +2,7 @@ const input = document.querySelector('#validation-input');
 
 input.addEventListener('blur', onInputChange);
 
-//? solution 1
+// // ? solution 1
 // function onInputChange() {
 //   input.classList.add('invalid');
 
@@ -20,7 +20,6 @@ function onInputChange() {
     !dataset.length || value.trim().length === Number(dataset.length);
   //! "!dataset.length" - це перевірить чи є валідне значення у `data-length=""`(якщо не валідне (false), то "isLengthValid" буде (true), і буде додано клас "valid", якщо ж у `data-length=""` буде якесь значення, то клас "valid", буде додано тільки тоді коли довжина рядка який введено буде відповідати значення `data-length=""`)
 
-  classList.remove('valid');
-  classList.remove('invalid');
+  classList.remove('valid', 'invalid');
   classList.add(isLengthValid ? 'valid' : 'invalid');
 }

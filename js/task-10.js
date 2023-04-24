@@ -15,6 +15,7 @@ const refs = {
   buttonDestroy: controlsEl.querySelector('button[data-destroy]'),
 };
 
+
 refs.buttonCreate.addEventListener('click', getInputNumber);
 refs.buttonDestroy.addEventListener('click', destroyBoxes);
 
@@ -43,6 +44,12 @@ function getInputNumber() {
 
 function makeBoxesMarkup(height, width) {
   return `
-<div  style="height: ${height}px; width: ${width}px;background-color: ${getRandomHexColor()};"></div>
+    <div
+      style="
+        height: ${height}px; 
+        width: ${width}px;
+        background-color: ${getRandomHexColor()};
+      "
+    ></div>
   `;
 }

@@ -9,10 +9,11 @@ const ingredients = [
 
 //? solution
 
-const ingredientsEl = document.querySelector('#ingredients');
+const ingredientsEl = document.getElementById('ingredients');
 
 const createElementLi = item => {
   const element = document.createElement('li');
+
   element.textContent = item;
   element.classList.add('item');
 
